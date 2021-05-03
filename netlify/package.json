@@ -1,0 +1,12 @@
+{
+  "name": "netlify-github-app",
+  "version": "1.0.0",
+  "description": "demo github app using serverless",
+  "main": "index.js",
+  "author": "Kurt Hutten",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@netlify/functions": "^0.7.0"
+  }
+}
