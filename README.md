@@ -1,26 +1,12 @@
 # Serverless Github app starter
 
+Starter/demo repo for setting up a github app with serverless approach. The code here is very simple it:
+1. Receives a web hook from Github
+2. Verifies the hook is from Github
+3. Writes a comment to the pull request (if the web hook is a pull request event).
 
+With an end to end demo like this you should be able to take it from there to implement your own bushiness logic. For information on how to setup a Github App through the Github web app to make this code run see the [full guide](https://kurthutten.com/blog/getting-start-with-a-serverless-github-app).
 
-> **WARNING:** RedwoodJS software has not reached a stable version 1.0 and should not be considered suitable for production use. In the "make it work; make it right; make it fast" paradigm, Redwood is in the later stages of the "make it work" phase.
+The start up run `yarn install` then `yarn rw dev` and the function will be run on `localhost:8911/githubhook`.
 
-## Getting Started
-- [Tutorial](https://redwoodjs.com/tutorial/welcome-to-redwood): getting started and complete overview guide.
-- [Docs](https://redwoodjs.com/docs/introduction): using the Redwood Router, handling assets and files, list of command-line tools, and more.
-- [Redwood Community](https://community.redwoodjs.com): get help, share tips and tricks, and collaborate on everything about RedwoodJS.
-
-### Setup
-
-We use Yarn as our package manager. To get the dependencies installed, just do this in the root directory:
-
-```terminal
-yarn install
-```
-
-### Fire it up
-
-```terminal
-yarn redwood dev
-```
-
-Your browser should open automatically to `http://localhost:8910` to see the web app. Lambda functions run on `http://localhost:8911` and are also proxied to `http://localhost:8910/.redwood/functions/*`.
+This repo uses redwood because of how easy it is to get setup with serverless functions. We've used redwood's generation tool so there are a lot of extra app files, but you can concentrate on `api/src/functions/githubhook.ts`. There's nothing about this function that's specific to redwood so it should be applicable to other serverless tools (netlify, serverless etc).
