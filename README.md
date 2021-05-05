@@ -5,6 +5,8 @@ Starter/demo repo for setting up a github app with serverless approach. The code
 2. Verifies the hook is from Github
 3. Writes a comment to the pull request (if the web hook is a pull request event).
 
+![image](https://raw.githubusercontent.com/Irev-Dev/repo-images/main/images/show-comment.jpg)
+
 With an end to end demo like this you should be able to take it from there to implement your own bushiness logic. For information on how to setup a Github App through the Github web app to make this code run see the [full guide](https://kurthutten.com/blog/getting-start-with-a-serverless-github-app).
 
 The start up run `yarn install` then `yarn rw dev` and the function will be run on `localhost:8911/githubhook`.
